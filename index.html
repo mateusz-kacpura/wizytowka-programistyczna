@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css"></link>
     <link rel="stylesheet" href="button.css"></link>
     <link rel="stylesheet" href="title.css"></link>
+    <link rel="stylesheet" href="foother.css"></link>
     <link rel="stylesheet" href="modules/Jaxit/jaxit.css" />   
 </head>
 <body>
@@ -40,12 +41,26 @@
         </div>
         <div class="grid-item item-left">About me</div>
         <div class="grid-item grid-right item-right">
-            <div class="grid-item item-in-right-up"></div>
-            <div class="grid-item jaxit-console">
+            <div class="grid-item item-in-right-up">
+                <div id="viewer" style="width: 100%; height: 700px;"></div>
+                <script type="text/javascript" src="https://cloudpdf.io/viewer.min.js"></script>
+                <script>
+                  const config = { 
+                    documentId: '787dde54-9d9e-46e6-83c6-3869a948ea21',
+                    darkMode: true, 
+                    token: '' //add your server side generated security token or change your document permission to public
+                  };
+                  CloudPDF(config, document.getElementById('viewer')).then((instance) => {
+                    
+                  });
+                </script>            </div>
+            <div class="grid-item jaxit-console"> 
             <script type="module" src="modules/Jaxit/script.js"></script>
             </div>
         </div>
-        <div class="grid-item item-foother"></div>
+        <div class="grid-item item-foother">
+            <p class="foother-text">Witaj na mojej stronie!</p>
+        </div>
     </div>
     <script>feather.replace();</script>
     <script src="modules/Jaxit/jaxit.js"></script>
