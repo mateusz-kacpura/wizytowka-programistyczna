@@ -76,7 +76,8 @@ body {
     border-right: solid;
     border-bottom: solid;    
     border-top: solid;    
-    border-color: red;
+    border-color: rgb(255, 0, 0);
+    overflow: hidden;
 }
 
 
